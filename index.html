@@ -11,6 +11,7 @@
 <body>
 
   <div class="glow glow-hero" aria-hidden="true"></div>
+  <div class="scroll-progress" id="progress" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
     <a class="nav-logo" href="#top">michael<span class="logo-dot">.</span>baker</a>
@@ -294,6 +295,9 @@
         <p class="cta-sub">I'd like to hear about them.</p>
         <div class="cta-actions">
           <a class="btn btn-primary" href="mailto:michaelbakerus@gmail.com">michaelbakerus@gmail.com</a>
+          <button class="btn btn-ghost btn-copy mono" id="copy-email" data-email="michaelbakerus@gmail.com" type="button">
+            <span class="copy-label">copy</span>
+          </button>
         </div>
         <div class="cta-links mono">
           <a href="https://github.com/" rel="noopener">github</a>
@@ -307,7 +311,12 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Michael Baker</span>
-    <span class="footer-meta mono">plain HTML/CSS/JS — no framework, no build step, no tracking</span>
+    <span class="footer-meta mono">
+      <span class="meta-swap">
+        <span class="meta-a">plain HTML/CSS/JS — no framework, no build step, no tracking</span>
+        <span class="meta-b" aria-hidden="true">designed on purpose · built with AI · reviewed by a human</span>
+      </span>
+    </span>
   </footer>
 
   <script src="main.js"></script>
