@@ -1,53 +1,83 @@
-// Typing effect in the hero terminal
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// ---------- hero ticker: cycling typed lines ----------
 const LINES = [
-  "whoami",
-  "michael.baker — generalist engineer",
-  "10y across QA · product · delivery · eng",
+  "improving engineering orgs through AI, platforms, and automation",
+  "fixing the pipeline nobody owns",
+  "landing the migration everyone avoids",
+  "deleting toil, one internal tool at a time",
 ];
 
 const typedEl = document.getElementById("typed");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (reduceMotion) {
-  typedEl.textContent = LINES.join("  |  ");
+  typedEl.textContent = LINES[0];
 } else {
   let line = 0;
   let char = 0;
+  let deleting = false;
 
-  function type() {
-    if (line >= LINES.length) return;
+  function tick() {
     const current = LINES[line];
-    if (char <= current.length) {
-      typedEl.textContent = current.slice(0, char);
+
+    if (!deleting) {
       char++;
-      setTimeout(type, 40 + Math.random() * 50);
+      typedEl.textContent = current.slice(0, char);
+      if (char === current.length) {
+        deleting = true;
+        setTimeout(tick, 2600);
+        return;
+      }
+      setTimeout(tick, 34 + Math.random() * 40);
     } else {
-      line++;
-      char = 0;
-      if (line < LINES.length) setTimeout(type, 900);
+      char -= 3;
+      if (char <= 0) {
+        char = 0;
+        deleting = false;
+        line = (line + 1) % LINES.length;
+      }
+      typedEl.textContent = current.slice(0, char);
+      setTimeout(tick, deleting ? 14 : 500);
     }
   }
 
-  setTimeout(type, 400);
+  setTimeout(tick, 600);
 }
 
-// Reveal sections as they scroll into view
-const sections = document.querySelectorAll(".section, .card");
-sections.forEach((el) => el.classList.add("reveal"));
+// ---------- staggered scroll reveal ----------
+const revealEls = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+    // stagger only the elements entering together in this batch
+    const entering = entries.filter((e) => e.isIntersecting);
+    entering.forEach((entry, i) => {
+      entry.target.style.setProperty("--reveal-delay", `${i * 70}ms`);
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
 );
 
-sections.forEach((el) => observer.observe(el));
+revealEls.forEach((el) => observer.observe(el));
 
-// Footer year
+// ---------- nav border on scroll ----------
+const nav = document.getElementById("nav");
+addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", scrollY > 12);
+}, { passive: true });
+
+// ---------- cursor-tracking spotlight on cards ----------
+if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
+  document.querySelectorAll(".card, .experiment").forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+      el.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    });
+  });
+}
+
+// ---------- footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();

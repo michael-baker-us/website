@@ -3,163 +3,303 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Michael Baker — Engineer</title>
-  <meta name="description" content="Michael Baker — generalist engineer. I connect the dots across infrastructure, delivery, and tooling." />
+  <title>Michael Baker — I make engineering organizations faster</title>
+  <meta name="description" content="Michael Baker improves engineering organizations through AI-assisted engineering, platform thinking, and automation." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▲</text></svg>" />
 </head>
 <body>
-  <div class="grid-bg" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="nav-logo" href="#top">
-      <span class="prompt">~/</span>michael.baker
-    </a>
+  <div class="glow glow-hero" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#top">michael<span class="logo-dot">.</span>baker</a>
     <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#work">What I Do</a>
-      <a href="#now">Now</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#problems">Problems</a>
+      <a href="#focus">Focus</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#working" class="nav-cta">Work with me</a>
     </nav>
   </header>
 
   <main id="top">
 
-    <!-- ============ HERO ============ -->
+    <!-- ================= HERO ================= -->
     <section class="hero">
-      <div class="terminal" aria-hidden="true">
-        <div class="terminal-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="terminal-title">zsh — whoami</span>
-        </div>
-        <div class="terminal-body">
-          <span class="prompt">$</span> <span id="typed"></span><span class="cursor">▋</span>
-        </div>
-      </div>
-
-      <h1 class="hero-title">
-        I connect the <span class="accent">dots</span><br />
-        other people work between.
-      </h1>
-
-      <p class="hero-sub">
-        Ten years across QA, product, delivery, and engineering.
-        I fix the pipeline nobody owns, roll out the change nobody
-        wants to coordinate, and build the tool everyone ends up using.
+      <p class="eyebrow reveal">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        AI-assisted engineering · platform thinking · automation
       </p>
 
-      <div class="hero-tags">
-        <span class="tag">infrastructure rollouts</span>
-        <span class="tag">CI/CD &amp; build pipelines</span>
-        <span class="tag">internal tooling</span>
-        <span class="tag">AI-augmented development</span>
+      <h1 class="hero-title reveal">
+        The bottleneck is<br />
+        <span class="gradient-text">never the code.</span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        I improve engineering organizations — the pipelines, platforms,
+        and processes between the code. Ten years across QA, product,
+        delivery, and engineering, now amplified by AI.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#problems">See what I solve</a>
+        <a class="btn btn-ghost" href="mailto:michaelbakerus@gmail.com">Get in touch</a>
+      </div>
+
+      <div class="hero-ticker reveal" aria-hidden="true">
+        <span class="mono">$</span> <span id="typed"></span><span class="cursor">▋</span>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <h2 class="section-heading"><span class="section-num">01</span> About</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a generalist by design, not by accident. My career has run
-            through QA, QA management, technical product management, and
-            delivery — which means I've seen software fail from every seat
-            in the room.
-          </p>
-          <p>
-            I don't write every line by hand. I work the way modern
-            engineering is heading: pairing deep systems context with AI
-            coding tools to ship things that used to require a full team.
-            The value I bring isn't typing speed — it's knowing <em>what</em>
-            to build, <em>why</em> it's broken, and <em>who</em> it affects.
-          </p>
-        </div>
-        <div class="about-panel">
-          <pre class="code-block"><code><span class="c-key">role</span>:      <span class="c-str">"generalist engineer"</span>
-<span class="c-key">domain</span>:    <span class="c-str">"fintech"</span>
-<span class="c-key">years</span>:     <span class="c-num">10</span>
-<span class="c-key">strengths</span>:
-  - <span class="c-str">"seeing the whole system"</span>
-  - <span class="c-str">"unblocking teams"</span>
-  - <span class="c-str">"shipping with AI leverage"</span></code></pre>
-        </div>
-      </div>
+    <!-- ================= THESIS ================= -->
+    <section class="thesis">
+      <p class="thesis-text reveal">
+        Most engineering problems are <em>organizational problems</em> wearing
+        a technical costume. A flaky pipeline is an ownership problem. A stalled
+        migration is a coordination problem. Slow delivery is a systems problem.
+        <em>I've sat in every seat in the room</em> — QA, product, delivery,
+        engineering — so I recognize the costume.
+      </p>
     </section>
 
-    <!-- ============ WHAT I DO ============ -->
-    <section class="section" id="work">
-      <h2 class="section-heading"><span class="section-num">02</span> What I Do</h2>
+    <!-- ================= PROBLEMS I SOLVE ================= -->
+    <section class="section" id="problems">
+      <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span> Problems I solve</p>
+      <h2 class="section-title reveal">The work between the work.</h2>
+      <p class="section-lede reveal">
+        Every engineering org accumulates problems that don't belong to any
+        one team — so they belong to no one. That's where I operate.
+      </p>
+
       <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">⛁</div>
-          <h3>Infrastructure Rollouts</h3>
+        <article class="card reveal">
+          <div class="card-num mono">01</div>
+          <h3>The build everyone tolerates</h3>
           <p>
-            Cross-team changes that touch everything — Kubernetes migrations,
-            artifact repositories, security scanning — planned and landed
-            without lighting the org on fire.
+            Flaky CI, thirty-minute pipelines, deploys that need a rain dance.
+            I find the root cause, fix it, and leave the pipeline observable
+            so it stays fixed.
           </p>
+          <p class="card-outcome"><span class="mono">→</span> Engineers stop babysitting builds</p>
         </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">⚙</div>
-          <h3>Pipeline Surgery</h3>
+
+        <article class="card reveal">
+          <div class="card-num mono">02</div>
+          <h3>The migration nobody wants to lead</h3>
           <p>
-            Broken builds, flaky CI, mystery deploy failures. I find the
-            root cause, fix it, and leave the pipeline better documented
-            than I found it.
+            Kubernetes moves, artifact repositories, security scanning
+            rollouts — changes that touch every team. I plan the sequencing,
+            absorb the coordination cost, and land them without drama.
           </p>
+          <p class="card-outcome"><span class="mono">→</span> Platform change without the org-wide fire</p>
         </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">⌘</div>
-          <h3>Support Tooling</h3>
+
+        <article class="card reveal">
+          <div class="card-num mono">03</div>
+          <h3>The toil that never makes the roadmap</h3>
           <p>
-            The internal dashboards, CLIs, and glue scripts that quietly
-            save teams hours a week. Built fast, built to be maintained.
+            The manual release checklist, the deploy status nobody can find,
+            the report someone assembles by hand every Friday. I build the
+            internal tools that quietly delete this work.
           </p>
+          <p class="card-outcome"><span class="mono">→</span> Hours a week returned to every team</p>
         </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">◍</div>
-          <h3>AI-Leveraged Building</h3>
+
+        <article class="card reveal">
+          <div class="card-num mono">04</div>
+          <h3>AI adoption that's all demo, no delivery</h3>
           <p>
-            I use tools like Claude and Copilot as force multipliers —
-            turning ten years of systems intuition into working software
-            at a pace that didn't exist five years ago.
+            Every org is "using AI" and few are faster for it. I've made AI
+            coding tools a genuine force multiplier in my own work — and I
+            help teams turn novelty into workflow.
           </p>
+          <p class="card-outcome"><span class="mono">→</span> AI leverage that shows up in lead time</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-num mono">05</div>
+          <h3>Delivery that stalls between teams</h3>
+          <p>
+            The feature is "done" on three boards and shipped on none. I trace
+            delivery end to end, find where work actually waits, and fix the
+            handoff instead of adding another status meeting.
+          </p>
+          <p class="card-outcome"><span class="mono">→</span> Throughput, not theater</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-num mono">06</div>
+          <h3>Quality bolted on at the end</h3>
+          <p>
+            I started my career in QA, so I design quality into the pipeline —
+            fast feedback, meaningful gates, scanning that engineers trust
+            instead of ignore.
+          </p>
+          <p class="card-outcome"><span class="mono">→</span> Confidence built in, not inspected in</p>
         </article>
       </div>
     </section>
 
-    <!-- ============ NOW ============ -->
-    <section class="section" id="now">
-      <h2 class="section-heading"><span class="section-num">03</span> Now</h2>
-      <div class="now-panel">
-        <div class="now-status">
-          <span class="status-dot" aria-hidden="true"></span> currently building
+    <!-- ================= CURRENT FOCUS ================= -->
+    <section class="section" id="focus">
+      <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span> Current focus</p>
+      <h2 class="section-title reveal">AI is the new leverage.<br />I'm going deep.</h2>
+
+      <div class="focus-grid">
+        <div class="focus-narrative reveal">
+          <p>
+            The engineers who matter most in the next decade won't be the ones
+            who type fastest. They'll be the ones who combine <em>systems
+            judgment</em> — knowing what to build, why it's broken, who it
+            affects — with the leverage of AI tooling.
+          </p>
+          <p>
+            That's the bet I'm making with my own career. I build real software
+            with AI as a collaborator, and I study where these tools genuinely
+            accelerate engineering organizations versus where they just
+            generate motion.
+          </p>
         </div>
-        <ul class="now-list">
-          <li>
-            <span class="now-name">Engineering Copilot</span>
-            <span class="now-desc">— a desktop app that understands your repos, docs, and pipelines</span>
+        <ul class="focus-list">
+          <li class="focus-item reveal">
+            <span class="focus-marker mono" aria-hidden="true">◆</span>
+            <div>
+              <h3>AI-assisted development as a discipline</h3>
+              <p>Not prompting tricks — repeatable workflows for building, reviewing, and shipping with AI in the loop.</p>
+            </div>
           </li>
-          <li>
-            <span class="now-name">OutRun Racer</span>
-            <span class="now-desc">— a pseudo-3D arcade racer, because rendering is worth understanding</span>
+          <li class="focus-item reveal">
+            <span class="focus-marker mono" aria-hidden="true">◆</span>
+            <div>
+              <h3>Platforms that make the right thing easy</h3>
+              <p>Golden paths, paved roads, sensible defaults — so teams ship without asking permission.</p>
+            </div>
+          </li>
+          <li class="focus-item reveal">
+            <span class="focus-marker mono" aria-hidden="true">◆</span>
+            <div>
+              <h3>Automation with a payback period</h3>
+              <p>Automating the work that actually recurs, measured by hours returned — not automation for its own sake.</p>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <h2 class="section-heading"><span class="section-num">04</span> Contact</h2>
-      <p class="contact-lede">Have a hard problem that spans teams, tools, and pipelines?</p>
-      <a class="contact-btn" href="mailto:michaelbakerus@gmail.com">
-        <span class="prompt">$</span> say hello
-      </a>
-      <div class="contact-links">
-        <a href="https://github.com/" rel="noopener">github</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://www.linkedin.com/" rel="noopener">linkedin</a>
+    <!-- ================= ENGINEERING EXPERIMENTS ================= -->
+    <section class="section" id="experiments">
+      <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span> Engineering experiments</p>
+      <h2 class="section-title reveal">The lab.</h2>
+      <p class="section-lede reveal">
+        I sharpen fundamentals by building things slightly beyond my reach —
+        each experiment exists to teach me something specific.
+      </p>
+
+      <div class="experiments">
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>Engineering Copilot</h3>
+            <span class="status status-active">building</span>
+          </div>
+          <p>A desktop app that understands your repos, docs, and pipelines. Semantic search, PR summaries, architecture views.</p>
+          <p class="experiment-teaches mono">teaches: RAG · embeddings · vector search · background workers</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>OutRun Racer</h3>
+            <span class="status status-active">building</span>
+          </div>
+          <p>A pseudo-3D arcade racer in the style of 1986. Because nothing teaches performance like a render loop.</p>
+          <p class="experiment-teaches mono">teaches: rendering · game loops · camera systems · optimization</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>HTTP Load Tester</h3>
+            <span class="status status-queued">queued</span>
+          </div>
+          <p>A small k6 alternative. Concurrency, backpressure, and honest benchmarking from first principles.</p>
+          <p class="experiment-teaches mono">teaches: concurrency · networking · benchmarking</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>Kubernetes Visualizer</h3>
+            <span class="status status-queued">queued</span>
+          </div>
+          <p>Live graph of pods, services, and deployments — making cluster state legible at a glance.</p>
+          <p class="experiment-teaches mono">teaches: k8s API · graph viz · real-time updates</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>AI PR Reviewer</h3>
+            <span class="status status-exploring">exploring</span>
+          </div>
+          <p>Static analysis meets LLMs — what does a code review bot need to know before its comments earn trust?</p>
+          <p class="experiment-teaches mono">teaches: AST parsing · GitHub APIs · LLM integration</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
+            <h3>Repo Architecture Explorer</h3>
+            <span class="status status-exploring">exploring</span>
+          </div>
+          <p>Point it at a codebase, get the architecture diagram the README promised but never delivered.</p>
+          <p class="experiment-teaches mono">teaches: dependency graphs · AST parsing · visualization</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= WORKING WITH ME ================= -->
+    <section class="section" id="working">
+      <p class="eyebrow reveal"><span class="eyebrow-dot" aria-hidden="true"></span> Working with me</p>
+      <h2 class="section-title reveal">Operating principles.</h2>
+
+      <ol class="principles">
+        <li class="principle reveal">
+          <span class="principle-num mono">/01</span>
+          <div>
+            <h3>Systems before symptoms</h3>
+            <p>The third time the same thing breaks, the problem isn't the thing — it's the system around it. I fix the system.</p>
+          </div>
+        </li>
+        <li class="principle reveal">
+          <span class="principle-num mono">/02</span>
+          <div>
+            <h3>AI is leverage, not a shortcut</h3>
+            <p>I use AI to move faster on work I understand deeply — never to ship things I couldn't defend in review.</p>
+          </div>
+        </li>
+        <li class="principle reveal">
+          <span class="principle-num mono">/03</span>
+          <div>
+            <h3>Ship the boring fix</h3>
+            <p>The clever solution impresses; the boring one survives. I optimize for the engineer who inherits my work.</p>
+          </div>
+        </li>
+        <li class="principle reveal">
+          <span class="principle-num mono">/04</span>
+          <div>
+            <h3>Leave a paper trail</h3>
+            <p>Every fix comes with the write-up: what broke, why, and how to see it coming next time. Docs are part of done.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="cta-panel reveal">
+        <h2 class="cta-title">Working on hard <span class="gradient-text">organizational engineering</span> problems?</h2>
+        <p class="cta-sub">I'd like to hear about them.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:michaelbakerus@gmail.com">michaelbakerus@gmail.com</a>
+        </div>
+        <div class="cta-links mono">
+          <a href="https://github.com/" rel="noopener">github</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.linkedin.com/" rel="noopener">linkedin</a>
+        </div>
       </div>
     </section>
 
@@ -167,7 +307,7 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Michael Baker</span>
-    <span class="footer-meta">built with plain HTML/CSS — no framework, no build step</span>
+    <span class="footer-meta mono">plain HTML/CSS/JS — no framework, no build step, no tracking</span>
   </footer>
 
   <script src="main.js"></script>
