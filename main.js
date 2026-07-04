@@ -10,7 +10,9 @@ const LINES = [
 
 const typedEl = document.getElementById("typed");
 
-if (reduceMotion) {
+if (!typedEl) {
+  // not on this page
+} else if (reduceMotion) {
   typedEl.textContent = LINES[0];
 } else {
   let line = 0;
@@ -119,7 +121,7 @@ if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
   // the ambient hero glow drifts gently opposite the pointer
   const glow = document.querySelector(".glow-hero");
   let glowRaf = null;
-  addEventListener("pointermove", (e) => {
+  if (glow) addEventListener("pointermove", (e) => {
     if (glowRaf) return;
     glowRaf = requestAnimationFrame(() => {
       const nx = e.clientX / innerWidth - 0.5;
@@ -133,10 +135,10 @@ if (!reduceMotion && matchMedia("(pointer: fine)").matches) {
 
 // ---------- copy email ----------
 const copyBtn = document.getElementById("copy-email");
-const copyLabel = copyBtn.querySelector(".copy-label");
+const copyLabel = copyBtn?.querySelector(".copy-label");
 let copyTimer = null;
 
-copyBtn.addEventListener("click", async () => {
+copyBtn?.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(copyBtn.dataset.email);
   } catch {
