@@ -63,7 +63,9 @@
             <h3>Engineering Delivery Manager <span class="role-scope">— platform &amp; developer experience</span></h3>
             <ul class="role-points">
               <li>Built the GitLab CI component library that ~200 repositories run on — Java/Maven microservices, React apps, .NET services, Python projects. Org-wide pipeline changes ship as a version bump, not 200 hand edits.</li>
-              <li>Landed org-wide capabilities through that platform: Trivy and Snyk security scanning, SonarQube quality gates, Artifactory release promotion — and AI-assisted merge-request reviews in every team's default pipeline.</li>
+              <li>Landed org-wide capabilities through that platform: Trivy and Semgrep security scanning, SonarQube quality gates, Artifactory release promotion — and AI-assisted merge-request reviews in every team's default pipeline.</li>
+              <li>Moved us from on-prem GitLab and Nexus to LSEG's cloud GitLab and JFrog Artifactory, and almost nobody noticed — which was the point. Backwards compatibility kept workflows and internal tooling like our deploy tool Shipit working; scanning, promotion lifecycles, and corporate requirements landed under the covers.</li>
+              <li>Migrated our main app stack off OpenJDK/docker.io base images onto Docker Hardened Images — ending the treadmill of patching CVEs in Linux userland packages nothing actually used.</li>
               <li>Run AI enablement across engineering: docs, internal tooling, and hands-on pairing that turn Copilot and Claude Code from licenses people have into leverage people use.</li>
             </ul>
           </div>
@@ -108,7 +110,7 @@
           <p>
             Claude Code · GitHub Copilot · GitLab CI · GitHub Actions · Jenkins ·
             Artifactory · SonarQube · Docker · Kubernetes · AWS · Terraform ·
-            Ansible · Trivy · Snyk · Prometheus · Elasticsearch/Kibana ·
+            Ansible · Trivy · Semgrep · Prometheus · Elasticsearch/Kibana ·
             TypeScript · Python · Bash · SQL
           </p>
         </div>
