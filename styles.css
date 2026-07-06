@@ -513,6 +513,19 @@ body {
   0%, 100% { box-shadow: 0 0 0 0 rgba(78, 240, 192, 0.5); opacity: 1; }
   50% { box-shadow: 0 0 0 4px rgba(78, 240, 192, 0); opacity: 0.6; }
 }
+.status-shipped {
+  color: var(--bg);
+  border-color: var(--accent);
+  background: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.status-shipped::before {
+  content: "✓";
+  font-size: 0.7rem;
+  line-height: 1;
+}
 .status-exploring{ color: var(--accent-2); border-color: rgba(139, 156, 249, 0.35); background: rgba(139, 156, 249, 0.07); }
 .status-queued   { color: var(--text-faint); border-color: var(--border); background: transparent; }
 

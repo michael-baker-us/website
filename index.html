@@ -213,6 +213,15 @@
 
         <article class="experiment reveal">
           <div class="experiment-head">
+            <h3>git-branch-cleaner</h3>
+            <span class="status status-shipped">shipped</span>
+          </div>
+          <p>A CLI (<span class="mono">gbc</span>) that audits a repo's local branches — merged, gone, stale, abandoned — and cleans them up safely. Read-only by default, archives every branch as a recovery tag before deleting, and never touches protected or remote branches.</p>
+          <p class="experiment-teaches mono">teaches: CLI design · git plumbing · safe-by-default UX · TypeScript packaging · testing</p>
+        </article>
+
+        <article class="experiment reveal">
+          <div class="experiment-head">
             <h3>OutRun Racer</h3>
             <span class="status status-active">building</span>
           </div>
@@ -223,7 +232,7 @@
       </div>
 
       <p class="experiments-bench mono reveal">
-        on the bench: deployment planner · config diff viewer · release notes generator · log explorer · rest mock server · docker image explorer · git branch cleaner · ci pipeline visualizer · env var manager
+        on the bench: deployment planner · config diff viewer · release notes generator · log explorer · rest mock server · docker image explorer · ci pipeline visualizer · env var manager
       </p>
     </section>
 
